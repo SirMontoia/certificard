@@ -1,0 +1,162 @@
+/* 3 formas de estilizar: Por class, por elementos gerais (todos os p's por exemplo) e por id (um único elemento, algo único na página)
+
+É interessante começar a estilização pelos maiores elementos
+
+Margin: Distância entre um elemento anterior ao elemento a ser estilizado
+
+Border - Radius: Usado para arredondar elementos, no caso, arredondar o box branco
+
+Box shadow : Sombra abaixo do elemento
+
+Padding: Distância entre o elemento maior dos elementos dentro dele ( no caso, distancia entre a div container e a imagem por exemplo)
+
+Flex-Box: Estilizar de forma dinâmica os elementos dentro de uma tag pai, no caso, os elementos dentro da tag header por exemplo
+
+Max-Height : USado para definir a altura máxima de um elemento, usado por exemplo para dimensionar a foto de perfil dessa página 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
+
+body {
+  background: linear-gradient(230.85deg, #e5272f 30%, #40aedf 70%);
+  font-family: "Inconsolata", monospace;
+}
+
+.container {
+  background: #ecf4ff;
+
+  color: #1c1c1c;
+
+  margin: 64px;
+
+  border-radius: 50px;
+
+  box-shadow: 6px 6px 6px #0e1d2f;
+
+  padding: 64px;
+}
+
+.cabecalho{
+  
+  display: flex;
+  justify-content:space-between;
+}
+
+.perfil {
+  display: flex;
+  
+}
+
+.perfil-foto {
+  border-radius: 400px;
+  max-height: 160px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.titulo {
+  margin-left: 16px;
+}
+
+.titulo h1 {
+  // estilizar apenas o h1 dentro da tag que recebe a classe titulo
+
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.titulo h3{
+  font-weight: 400;
+  font-size 24px;
+}
+
+
+.tema button{ 
+
+align-self: flex-end;
+font-size: 24px;
+font-wigth: 400;
+padding: 8px 16px; /* 8 top e bottom e 16 right left*/
+background: #ecf4ff;
+border-radius: 100px;
+
+}
+
+.projetos{
+  
+  display: flex; 
+  flex-direction: column;
+  background: linear-gradient(230.65deg, #499CFE 27.49%, #9CC8FC 83.19%);
+  margin-top: 32px;
+  padding: 32px;
+  box-shadow: 2px 2px 4px rgba(16,16,16,0.42);
+  border-radius: 20px;
+  
+}
+
+.imgLogos{
+  height: 45px;
+  width: 45px;
+  
+  
+}
+
+.divLogos{
+  display:block;
+  flex-direction: row;
+  text-align: center;
+  
+}
+
+.projetos-titulo{
+  
+  list-style: none;
+  font-weight: 700;
+  font-size: 36px;
+  
+}
+
+.projetos li{
+  
+  list-style-type: none;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 48px;
+  
+}
+
+.projetos a {
+  
+  color: #1C1C1C;
+  text-decoration: none;
+  
+}
+
+.dark{
+  
+  background: linear-gradient(236.85deg, #375B86 27.26%, #6B87A9 96.03% );
+  
+}
+
+.dark .container{ /* para todo elemento container dentro da classe dark
+ Quando botão mudar o body para dark, essa classe também muda todos os elementos dentro dele
+  
+  botão -- dark ---> Classe entra e muda todos os elementos do container dentro de dark
+  
+  */
+  
+  background: #333439;
+  color: #F6F6F6;
+  
+}
+
+.dark .projetos {
+  color: #1C1C1C
+  
+ }
+
+.dark .tema button {
+  
+  background: #1C1C1C;
+  color: #FFFFFF;
+  border: 2px solid #F7F7F7;
+}
